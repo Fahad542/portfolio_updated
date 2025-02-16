@@ -26,60 +26,48 @@ const About = () => {
         What I can do?
       </h1>
 
-      <div className="cards-row">
-        <div>
-          <BallCanvas icon={flutter} />
-        </div>
-
-        {/* <AnimatedCard
-          imageUrl={flutter} // Replace with your image URL
-          description="Flutter"
-        /> */}
-        <div>
-          <BallCanvas icon={react_native} />
-        </div>
-        {/* <AnimatedCard
-          imageUrl={react_native} // Replace with your image URL
-          description="React Native"
-        /> */}
-        <div>
-          <BallCanvas icon={firebase} />
-        </div>
-        {/* <AnimatedCard
-          imageUrl={firebase} // Replace with your image URL
-          description="Firebase"
-        /> */}
-        <div>
-          <BallCanvas icon={angular} />
-        </div>
-        {/* <AnimatedCard
-          imageUrl={angular} // Replace with your image URL
-          description="Angular"
-        /> */}
-        <div>
-          <BallCanvas icon={sqflite} />
-        </div>
-        {/* <AnimatedCard
-          imageUrl={sqflite} // Replace with your image URL
-          description="Sqf Lite"
-        /> */}
-        <div>
-          <BallCanvas icon={firebase} />
-        </div>
-
-        {/* <AnimatedCard
-          imageUrl={firebase} // Replace with your image URL
-          description="Firebase"
-        /> */}
-        <div>
-          <BallCanvas icon={api} />
-        </div>
-        {/* <AnimatedCard
-          imageUrl={api} // Replace with your image URL
-          description="Rest Apis"
-        /> */}
+      <div className="d-flex  flex-row flex-wrap justify-content-center gap-10 ">
+       <div class="ball-div"  >
+        <BallCanvas icon={flutter} />
+       </div>
+        
+    
+       <div class="ball-div" >
+              <BallCanvas icon={react_native} />
       </div>
+  
+    
+      <div class="ball-div" >
+               <BallCanvas icon={firebase} />
+       </div>
+ 
+     
+       <div class="ball-div" >
+        <BallCanvas icon={angular} />
+  </div>
+     
 
+    
+
+  <div class="ball-div" >
+     <BallCanvas icon={sqflite} />
+  </div>
+       
+  <div class="ball-div" >
+    <BallCanvas icon={firebase} />
+   </div>
+        
+   <div class="ball-div" >
+        <BallCanvas icon={api} />
+       </div>
+        
+  
+      
+
+      </div>
+        
+
+       
       <div className="row card2">
         <div className="col-sm-4 center-col">
           <Skill_card

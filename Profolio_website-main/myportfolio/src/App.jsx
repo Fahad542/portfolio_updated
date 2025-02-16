@@ -9,26 +9,40 @@ import { gsap, Power3 } from "gsap";
 import Project from "./components/Project";
 import Contact_us from "./components/Contact_us";
 import Footer from "./components/Footer";
+import bgvideo from "./assets/videos/background.mp4";
+import imggg from "./assets/Icons/app3.png";
 // import { Canvas } from '@react-three/fiber';
 function App() {
   let tl = new gsap.timeline();
   let ease = Power3.easeOut;
   return (
     <>
-      <div>
-
+     
+{/* 
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
+        <div class="circle circle3"></div> */}
+        {/* <div className="helloworld">
+          <Navbar timeline={tl} ease={ease} />
+          <Hero />
+        </div> */}
+       
+
+       <div class="bg-video-div">
+        <video src={bgvideo} autoPlay loop muted></video>
         <Navbar timeline={tl} ease={ease} />
-        <Hero />
+          <Hero />
+       </div>
+
+
+       
         <About />
         <Project />
         <div className="container d-flex justify-content-center">
         <Contact_us/>
         </div>
         <Footer />
-      </div>
+      
     </>
   );
 }
