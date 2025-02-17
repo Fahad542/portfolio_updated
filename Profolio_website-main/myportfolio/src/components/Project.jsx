@@ -12,7 +12,7 @@ const Project = React.forwardRef((props, ref) => {
       <div className='row projectcontainer'>
 
       {Projects.map((project) => (
-          <div key={project.id} className="col-sm-4 center-col">
+          <div key={project.id} className="col-sm-4 center-col ">
             <My_projects
               imageSrc={project.img} // Ensure this property is added if needed
               title={project.title}

@@ -1,6 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oleo+Script:wght@400;700&family=Playwrite+CA:wght@100..400&display=swap');
 
+
+
+
+/* contact */
+.contcontainer {
+  margin-top: 150px;
+  position: relative;
+  width: 800px;
+  background: linear-gradient(135deg, rgba(168, 0, 168, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(103, 99, 99, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.girl-image {
+  position: absolute;
+  left: -120px;
+  top: -50px;
+  width: 350px;
+  z-index: 2;
+  animation: floatAnimation 3s ease-in-out infinite;
+} 
+.contact-form {
+  margin-left: 100px;
+}
+
+.contact-form h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.form-group1 {
+  margin-bottom: 20px;
+}
+
+.inputclass, .textclass {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.inputclass:focus, .textclass:focus {
+  outline: none;
+  border-color: #ff7eb9;
+}
+
+.textclass {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #5c0a51;
+  color: white;
+  padding: 12px 30px;
+  border: 1px solid #615d61;
+  box-shadow: 0 8px 32px 0 rgba(103, 99, 99, 0.37);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+ background-color: #000000;
+ color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contcontainer {
+      width: 90%;
+      padding: 30px;
+  }
+  
+  .girl-image {
+      display: none;
+  }
+  
+  .contact-form {
+      margin-left: 0;
+  }
+}
+
+
 .ball-div {
   width: 150px;
   height: 150px;
@@ -716,6 +819,11 @@ div.hero-buttons {
   object-fit: fill;
   border-radius: 20px;
   transition: box-shadow 0.5s ease; 
+
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
 
 }
 .framework-item{
