@@ -9,10 +9,11 @@ import api from "../assets/Icons/api.png";
 import BallCanvas from "./Ball";
 import Skill_bar from "./Skill_bar";
 import Timeline from "./Timeline";
+import React from "react";
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className="container about text-center pt-3">
+    <div ref={ref} id="about" className="container about text-center pt-3">
       <h1 className="oleo intro-h">My Intro</h1>
       <p className="into-text">
         A highly skilled Flutter developer with Two year of experience in
@@ -106,6 +107,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

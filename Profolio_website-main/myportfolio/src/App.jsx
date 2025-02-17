@@ -11,8 +11,15 @@ import Contact_us from "./components/Contact_us";
 import Footer from "./components/Footer";
 import bgvideo from "./assets/videos/background.mp4";
 import imggg from "./assets/Icons/app3.png";
+import React, { useRef } from "react";
 // import { Canvas } from '@react-three/fiber';
 function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const projectsRef = useRef(null);
+  // const blogRef = useRef(null);
+
   let tl = new gsap.timeline();
   let ease = Power3.easeOut;
   return (
@@ -30,16 +37,16 @@ function App() {
 
        <div class="bg-video-div">
         <video src={bgvideo} autoPlay loop muted></video>
-        <Navbar timeline={tl} ease={ease} />
-          <Hero />
+        <Navbar timeline={tl} ease={ease} homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef} projectsRef={projectsRef}  />
+          <Hero ref={homeRef} />
        </div>
 
 
        
-        <About />
-        <Project />
+        <About ref={aboutRef} />
+        <Project ref={projectsRef} />
         <div className="container d-flex justify-content-center">
-        <Contact_us/>
+        <Contact_us ref={contactRef} />
         </div>
         <Footer />
       

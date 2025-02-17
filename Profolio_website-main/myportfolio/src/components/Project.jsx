@@ -3,9 +3,9 @@ import React from 'react'
 import My_projects from './My_projects'
 import {timelineElements, Projects} from './Data'; 
 
-const Project = () => {
+const Project = React.forwardRef((props, ref) => {
   return (
-    <div className='container myproject text-center'>
+    <div ref={ref} id="projects" className='container myproject text-center'>
         <h1 className="oleo do-h" style={{ marginTop: "50px" }}>
         My Projects
       </h1>
@@ -26,6 +26,6 @@ const Project = () => {
   
     </div>
   )
-}
+});
 
 export default Project

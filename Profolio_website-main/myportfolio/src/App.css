@@ -145,6 +145,7 @@
   text-fill-color: transparent;
 }
 
+
 .mylogo {
   font-family: "Playwrite CA", cursive;
   font-size: 30px;
@@ -156,25 +157,116 @@
 .header {
   margin-top: 40px;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
 }
+
+.custom-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
 @media (max-width: 768px) {
   .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .custom-nav {
+    position: absolute;
+    top: 100%;
+    /* i want it to be the right side */
+    right: 0;
+    /* width: 100%; */
+    background: var(--background-color);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-          }
-  .col-sm-6.center-col.col2 
-          {
-    margin-top: 10%;
-          }                
-                          }
+    gap: 15px;
+    padding: 0 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    border-radius: 20px;
+  }
+  .custom-nav.open {
+    opacity: 1;
+    max-height: 500px;
+    visibility: visible;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(26, 1, 26, 0.6));
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-nav .link {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+
+  }
+
+  .custom-nav.open .link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .hamburger {
+    display: flex;
+    position: static;
+  }
+}
+
 .mylogo:hover {
   color: var(--primary-color);
 }
 
-.nav {
-  gap: 50px;
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 5px;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 18px;
 }
+
+.link:hover {
+  color: var(--primary-color);
+  transition: all 0.8s ease;
+}
+
+
 
 .btn_head{
   border-radius: 20px;
@@ -198,21 +290,6 @@
    
 }
 
-.link {
-  text-decoration: none;
-  color: var(--text-color);
-  padding: 5px;
-    
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-size:18px;
-}
-
-.link:hover {
-  
-  color: var(--primary-color);
-  transition: all 0.8s ease;
-}
 
 
 .hero-section {
